@@ -1,7 +1,7 @@
 //const { description } = require('../../package')
 
 module.exports = {
-  base: '/eli-mayost/issam-airflow-demo/',      
+  base: '/elimayost/issam-airflow-demo/',      
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
