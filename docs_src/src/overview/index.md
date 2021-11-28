@@ -4,7 +4,7 @@
 We are using the following services:
 
   - GitLab container registry
-  - IBM Cloud Object Storage
+  - Google Cloud Storage
 
 <br /><br />
 <a class="zoom" href="../overview.png" target="_blank">
