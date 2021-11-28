@@ -9,7 +9,7 @@
  - Local Kubernetes cluster (using [Minikube](https://minikube.sigs.k8s.io/docs/))
  - Easy management of the cluster (using [k9s](https://k9scli.io/)) 
  - [Rclone](https://rclone.org/)
- - The Gihub repo [here](https://github.kyndryl.net/eli-mayost/airflow-demo)
+ - The Gihub repo [here](https://github.com/elimayost/issam-airflow-demo)
 
 ## Setup the demo
 
@@ -45,8 +45,6 @@ kubectl config current-context
 ### Deploy secrets to the k8s cluster
 
 ```bash
-kubectl apply -f k8s/cos-secret.yaml
-
 kubectl apply -f k8s/git-sync-ssh-secret.yaml
 ```
 
