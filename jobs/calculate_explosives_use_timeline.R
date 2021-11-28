@@ -16,10 +16,10 @@ explosives_use_timeline <- data[weapon == "Explosives", .(total = .N), by = .(ye
 write_stdout("INFO", "Results calculated successfully")
 
 # Saving results locally
-data.table::fwrite(explosives_use_timeline, "/cmt/data/explosives_use_timeline.csv", sep = "|")
+saveRDS(explosives_use_timeline, "/cmt/data/explosives_use_timeline.rds")
 
 # Uploading results file to GCS
 write_stdout("INFO", "Uploading results to GCS")
-upload_file("explosives_use_timeline.csv", "/cmt/data/explosives_use_timeline.csv")
+upload_file("explosives_use_timeline.rds", "/cmt/data/explosives_use_timeline.rds")
 write_stdout("INFO", "Uploading results to GCS successful")
 

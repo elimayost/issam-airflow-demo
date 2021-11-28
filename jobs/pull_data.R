@@ -11,7 +11,7 @@ source("/cmt/utils/utils.R")
 # Read csv data from URL
 write_stdout("INFO", "Downloading data")
 
-data_url <- "https://gitlab.com/eli.mayost/issam-airflow-demo/-/raw/49f85804792e7a3daab3248f2567b4abd3903d79/globalterrorism.csv"
+data_url <- "https://gitlab.com/eli.mayost/issam-airflow-demo/-/raw/master/data/globalterrorism.csv"
 data     <- data.table::fread(data_url, sep = "|")
 
 write_stdout("INFO", paste0("Data download successful (", nrow(data)," rows)"))

@@ -16,10 +16,10 @@ suicide_prevalence <- data[, .(suicide_txt = fcase(suicide == 0, "No", suicide =
 write_stdout("INFO", "Results calculated successfully")
 
 # Saving results locally
-data.table::fwrite(suicide_prevalence, "/cmt/data/suicide_prevalence.csv", sep = "|")
+saveRDS(suicide_prevalence, "/cmt/data/suicide_prevalence.rds")
 
 # Uploading results file to GCS
 write_stdout("INFO", "Uploading results to GCS")
-upload_file("suicide_prevalence.csv", "/cmt/data/suicide_prevalence.csv")
+upload_file("suicide_prevalence.rds", "/cmt/data/suicide_prevalence.rds")
 write_stdout("INFO", "Uploading results to COS successful")
 

@@ -16,10 +16,10 @@ top_10_dangerous_countries <- data[, .(total = .N), by = .(country)][order(total
 write_stdout("INFO", "Results calculated successfully")
 
 # Saving results locally
-data.table::fwrite(top_10_dangerous_countries, "/cmt/data/top_10_dangerous_countries.csv", sep = "|")
+saveRDS(top_10_dangerous_countries, "/cmt/data/top_10_dangerous_countries.rds")
 
 # Uploading results file to GCS
 write_stdout("INFO", "Uploading results to GCS")
-upload_file("top_10_dangerous_countries.csv", "/cmt/data/top_10_dangerous_countries.csv")
+upload_file("top_10_dangerous_countries.rds", "/cmt/data/top_10_dangerous_countries.rds")
 write_stdout("INFO", "Uploading results to GCS successful")
 

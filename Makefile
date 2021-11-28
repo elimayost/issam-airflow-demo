@@ -19,7 +19,7 @@ push-image: registry-login
 build-and-push: registry-login build-image push-image
 
 start-cluster:
-	minikube start --nodes 3 --cpus 4 --memory 16g --driver kvm2
+	minikube start --cpus 4 --memory 16g --driver kvm2
 
 stop-cluster:
 	minikube stop

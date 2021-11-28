@@ -7,9 +7,9 @@ library(ggplot2    , warn.conflicts = FALSE)
 source("/cmt/utils/utils.R")
 
 # Get data from GCS
-explosives_use_timeline_df    <- get_object("explosives_use_timeline.csv")
-top_10_dangerous_countries_df <- get_object("top_10_dangerous_countries.csv")
-suicide_prevalence_df         <- get_object("suicide_prevalence.csv")
+explosives_use_timeline_df    <- get_object("explosives_use_timeline.rds")
+top_10_dangerous_countries_df <- get_object("top_10_dangerous_countries.rds")
+suicide_prevalence_df         <- get_object("suicide_prevalence.rds")
 
 # Generate graphs
 generate_top_10_dangerous_countries_graph <- function(){

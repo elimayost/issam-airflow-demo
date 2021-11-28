@@ -16,8 +16,7 @@ write_stdout <- function(level, msg){
 # auth to google cloud storage (GCS)
 auth <- function() {
   Sys.setenv("GCS_AUTH_FILE" = "/cmt/keys/gcs.json") 
-  #gcs_auth("/cmt/keys/gcs.json")
-  gcs_auth("keys/gcs.json")
+  gcs_auth("/cmt/keys/gcs.json")
 }
 
 # Upload file to GCS
