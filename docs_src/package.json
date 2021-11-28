@@ -1,0 +1,19 @@
+{
+  "name": "demo",
+  "version": "0.0.1",
+  "description": "Airflow demo",
+  "main": "index.js",
+  "authors": {
+    "name": "Eli Mayost",
+    "email": "eli.mayost@kyndryl.com"
+  },
+  "repository": "https://github.kyndryl.net/eli-mayost/airflow-demo/demo",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}

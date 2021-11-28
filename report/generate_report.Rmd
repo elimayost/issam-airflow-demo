@@ -1,0 +1,50 @@
+
+---
+title: "Airflow demo report"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE)
+```
+
+```{r}
+library(flexdashboard , warn.conflicts = FALSE)
+library(plotly        , warn.conflicts = FALSE)
+```
+
+```{r}
+source("/cmt/report/generate_report.R")
+```
+
+Demo visualisations
+=======================================================================
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Top 10 dangerous countries
+
+```{r}
+top_10_dangerous_countries_graph <- generate_top_10_dangerous_countries_graph()
+ggplotly(top_10_dangerous_countries_graph, tooltip = "text")
+```
+
+### Suicide prevalence
+
+```{r}
+suicide_prevalence_graph <- generate_suicide_prevalence_graph()
+ggplotly(suicide_prevalence_graph, tooltip = "text")
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Explosives use timeline
+```{r}
+explosives_use_timeline_graph <- generate_explosives_use_timeline_graph()
+ggplotly(explosives_use_timeline_graph, tooltip = "text")
+```
